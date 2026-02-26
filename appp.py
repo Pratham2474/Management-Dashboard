@@ -16,16 +16,6 @@ st.set_page_config(
 )
 
 # ==================== LOAD BACKGROUND IMAGE ====================
-@st.cache_data
-def load_background_image():
-    if os.path.exists('background.jpg'):
-        return 'background.jpg'
-    elif os.path.exists('background.png'):
-        return 'background.png'
-    else:
-        return None
-
-bg_image_path = load_background_image()
 
 # ==================== LOAD CUSTOM CSS ====================
 def load_css():
@@ -604,4 +594,5 @@ else:
             
             st.warning(f"⚠️ {len(high_risk_teachers)} teachers require immediate attention and intervention.")
         else:
+
             st.success("✅ No high-risk teachers identified! Great work on employee retention.")
